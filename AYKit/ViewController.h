@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIViewController+CommonProxy.h"
+#import "UIViewController+CommonFunction.h"
 
 @interface ViewController : UIViewController
 

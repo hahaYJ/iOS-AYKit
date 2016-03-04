@@ -19,7 +19,7 @@
 		882304E71C8920E600F5BF1B /* MainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 882304E11C8920E600F5BF1B /* MainCell.m */; };
 		882304E81C8920E600F5BF1B /* PopEnabeldCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 882304E31C8920E600F5BF1B /* PopEnabeldCollectionView.m */; };
 		882304E91C8920E600F5BF1B /* XXPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 882304E51C8920E600F5BF1B /* XXPageController.m */; };
-		882304ED1C89227000F5BF1B /* UIViewController+CommonProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 882304EC1C89227000F5BF1B /* UIViewController+CommonProxy.m */; };
+		882304ED1C89227000F5BF1B /* UIViewController+CommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 882304EC1C89227000F5BF1B /* UIViewController+CommonFunction.m */; };
 		882304F11C89571900F5BF1B /* AYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 882304F01C89571900F5BF1B /* AYTools.m */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +58,8 @@
 		882304E41C8920E600F5BF1B /* XXPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXPageController.h; sourceTree = "<group>"; };
 		882304E51C8920E600F5BF1B /* XXPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXPageController.m; sourceTree = "<group>"; };
 		882304EA1C89213D00F5BF1B /* AYHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYHeader.h; sourceTree = "<group>"; };
-		882304EB1C89227000F5BF1B /* UIViewController+CommonProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CommonProxy.h"; sourceTree = "<group>"; };
-		882304EC1C89227000F5BF1B /* UIViewController+CommonProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CommonProxy.m"; sourceTree = "<group>"; };
+		882304EB1C89227000F5BF1B /* UIViewController+CommonFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CommonFunction.h"; sourceTree = "<group>"; };
+		882304EC1C89227000F5BF1B /* UIViewController+CommonFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CommonFunction.m"; sourceTree = "<group>"; };
 		882304EE1C89544500F5BF1B /* AYConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYConstant.h; sourceTree = "<group>"; };
 		882304EF1C89571900F5BF1B /* AYTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYTools.h; sourceTree = "<group>"; };
 		882304F01C89571900F5BF1B /* AYTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYTools.m; sourceTree = "<group>"; };
@@ -161,8 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				882304DD1C8920E600F5BF1B /* XXPageCreater */,
-				882304EB1C89227000F5BF1B /* UIViewController+CommonProxy.h */,
-				882304EC1C89227000F5BF1B /* UIViewController+CommonProxy.m */,
+				882304EB1C89227000F5BF1B /* UIViewController+CommonFunction.h */,
+				882304EC1C89227000F5BF1B /* UIViewController+CommonFunction.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -284,7 +284,7 @@
 			files = (
 				882304E61C8920E600F5BF1B /* ItemCell.m in Sources */,
 				882304E81C8920E600F5BF1B /* PopEnabeldCollectionView.m in Sources */,
-				882304ED1C89227000F5BF1B /* UIViewController+CommonProxy.m in Sources */,
+				882304ED1C89227000F5BF1B /* UIViewController+CommonFunction.m in Sources */,
 				882304BA1C891C1E00F5BF1B /* ViewController.m in Sources */,
 				882304E71C8920E600F5BF1B /* MainCell.m in Sources */,
 				882304F11C89571900F5BF1B /* AYTools.m in Sources */,

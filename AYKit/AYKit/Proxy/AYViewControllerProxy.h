@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "AYConstant.h"
-#import "UIViewController+CommonProxy.h"
+#import "UIViewController+CommonFunction.h"
 
 @interface AYViewControllerProxy : NSObject
 

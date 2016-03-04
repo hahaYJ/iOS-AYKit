@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AYViewControllerProxy.h"
 
-@interface UIViewController (CommonProxy)
+@interface UIViewController (CommonFunction)
 
 @property (nonatomic, assign) bool launchPresentView;
 
