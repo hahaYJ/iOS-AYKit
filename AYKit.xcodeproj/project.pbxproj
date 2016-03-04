@@ -21,6 +21,14 @@
 		882304E91C8920E600F5BF1B /* XXPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 882304E51C8920E600F5BF1B /* XXPageController.m */; };
 		882304ED1C89227000F5BF1B /* UIViewController+CommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 882304EC1C89227000F5BF1B /* UIViewController+CommonFunction.m */; };
 		882304F11C89571900F5BF1B /* AYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 882304F01C89571900F5BF1B /* AYTools.m */; };
+		882304F91C897E2700F5BF1B /* SimpleImgAndTxtType1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882304F31C897E2700F5BF1B /* SimpleImgAndTxtType1.xib */; };
+		882304FA1C897E2700F5BF1B /* SimpleImgAndTxtType2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882304F41C897E2700F5BF1B /* SimpleImgAndTxtType2.xib */; };
+		882304FB1C897E2700F5BF1B /* SimpleImgLargeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882304F51C897E2700F5BF1B /* SimpleImgLargeCell.xib */; };
+		882304FC1C897E2700F5BF1B /* SimpleImgLargeInnerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882304F61C897E2700F5BF1B /* SimpleImgLargeInnerCell.xib */; };
+		882304FD1C897E2700F5BF1B /* SimpleImgLargeInnerCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882304F71C897E2700F5BF1B /* SimpleImgLargeInnerCell1.xib */; };
+		882304FE1C897E2700F5BF1B /* SimpleTxtForCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882304F81C897E2700F5BF1B /* SimpleTxtForCollectionCell.xib */; };
+		882305041C897E9300F5BF1B /* NYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 882305011C897E9300F5BF1B /* NYAlertView.m */; };
+		882305051C897E9300F5BF1B /* NYAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 882305031C897E9300F5BF1B /* NYAlertViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +71,16 @@
 		882304EE1C89544500F5BF1B /* AYConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYConstant.h; sourceTree = "<group>"; };
 		882304EF1C89571900F5BF1B /* AYTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYTools.h; sourceTree = "<group>"; };
 		882304F01C89571900F5BF1B /* AYTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYTools.m; sourceTree = "<group>"; };
+		882304F31C897E2700F5BF1B /* SimpleImgAndTxtType1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleImgAndTxtType1.xib; sourceTree = "<group>"; };
+		882304F41C897E2700F5BF1B /* SimpleImgAndTxtType2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleImgAndTxtType2.xib; sourceTree = "<group>"; };
+		882304F51C897E2700F5BF1B /* SimpleImgLargeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleImgLargeCell.xib; sourceTree = "<group>"; };
+		882304F61C897E2700F5BF1B /* SimpleImgLargeInnerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleImgLargeInnerCell.xib; sourceTree = "<group>"; };
+		882304F71C897E2700F5BF1B /* SimpleImgLargeInnerCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleImgLargeInnerCell1.xib; sourceTree = "<group>"; };
+		882304F81C897E2700F5BF1B /* SimpleTxtForCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleTxtForCollectionCell.xib; sourceTree = "<group>"; };
+		882305001C897E9300F5BF1B /* NYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYAlertView.h; sourceTree = "<group>"; };
+		882305011C897E9300F5BF1B /* NYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYAlertView.m; sourceTree = "<group>"; };
+		882305021C897E9300F5BF1B /* NYAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYAlertViewController.h; sourceTree = "<group>"; };
+		882305031C897E9300F5BF1B /* NYAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYAlertViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +126,7 @@
 				882304B61C891C1E00F5BF1B /* AppDelegate.m */,
 				882304B81C891C1E00F5BF1B /* ViewController.h */,
 				882304B91C891C1E00F5BF1B /* ViewController.m */,
+				882304F21C897E2700F5BF1B /* XibLibs */,
 				882304D71C891C4700F5BF1B /* AYKit */,
 				882304BB1C891C1E00F5BF1B /* Main.storyboard */,
 				882304BE1C891C1E00F5BF1B /* Assets.xcassets */,
@@ -160,6 +179,7 @@
 		882304DC1C8920DD00F5BF1B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				882304FF1C897E9300F5BF1B /* NYAlertViewController */,
 				882304DD1C8920E600F5BF1B /* XXPageCreater */,
 				882304EB1C89227000F5BF1B /* UIViewController+CommonFunction.h */,
 				882304EC1C89227000F5BF1B /* UIViewController+CommonFunction.m */,
@@ -180,6 +200,31 @@
 				882304E51C8920E600F5BF1B /* XXPageController.m */,
 			);
 			path = XXPageCreater;
+			sourceTree = "<group>";
+		};
+		882304F21C897E2700F5BF1B /* XibLibs */ = {
+			isa = PBXGroup;
+			children = (
+				882304F31C897E2700F5BF1B /* SimpleImgAndTxtType1.xib */,
+				882304F41C897E2700F5BF1B /* SimpleImgAndTxtType2.xib */,
+				882304F51C897E2700F5BF1B /* SimpleImgLargeCell.xib */,
+				882304F61C897E2700F5BF1B /* SimpleImgLargeInnerCell.xib */,
+				882304F71C897E2700F5BF1B /* SimpleImgLargeInnerCell1.xib */,
+				882304F81C897E2700F5BF1B /* SimpleTxtForCollectionCell.xib */,
+			);
+			path = XibLibs;
+			sourceTree = "<group>";
+		};
+		882304FF1C897E9300F5BF1B /* NYAlertViewController */ = {
+			isa = PBXGroup;
+			children = (
+				882305001C897E9300F5BF1B /* NYAlertView.h */,
+				882305011C897E9300F5BF1B /* NYAlertView.m */,
+				882305021C897E9300F5BF1B /* NYAlertViewController.h */,
+				882305031C897E9300F5BF1B /* NYAlertViewController.m */,
+			);
+			name = NYAlertViewController;
+			path = ../NYAlertViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +308,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				882304C21C891C1E00F5BF1B /* LaunchScreen.storyboard in Resources */,
+				882304FE1C897E2700F5BF1B /* SimpleTxtForCollectionCell.xib in Resources */,
 				882304BF1C891C1E00F5BF1B /* Assets.xcassets in Resources */,
+				882304F91C897E2700F5BF1B /* SimpleImgAndTxtType1.xib in Resources */,
 				882304BD1C891C1E00F5BF1B /* Main.storyboard in Resources */,
+				882304FD1C897E2700F5BF1B /* SimpleImgLargeInnerCell1.xib in Resources */,
+				882304FA1C897E2700F5BF1B /* SimpleImgAndTxtType2.xib in Resources */,
+				882304FB1C897E2700F5BF1B /* SimpleImgLargeCell.xib in Resources */,
+				882304FC1C897E2700F5BF1B /* SimpleImgLargeInnerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,9 +333,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				882305041C897E9300F5BF1B /* NYAlertView.m in Sources */,
 				882304E61C8920E600F5BF1B /* ItemCell.m in Sources */,
 				882304E81C8920E600F5BF1B /* PopEnabeldCollectionView.m in Sources */,
 				882304ED1C89227000F5BF1B /* UIViewController+CommonFunction.m in Sources */,
+				882305051C897E9300F5BF1B /* NYAlertViewController.m in Sources */,
 				882304BA1C891C1E00F5BF1B /* ViewController.m in Sources */,
 				882304E71C8920E600F5BF1B /* MainCell.m in Sources */,
 				882304F11C89571900F5BF1B /* AYTools.m in Sources */,
@@ -480,6 +533,7 @@
 				882304D31C891C1E00F5BF1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		882304D41C891C1E00F5BF1B /* Build configuration list for PBXNativeTarget "AYKitTests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +542,7 @@
 				882304D61C891C1E00F5BF1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -86,17 +86,7 @@ static dispatch_once_t onceDispatchProccess;
 
 #pragma mark 用于显示空页面
 - (void)drawEmptyPage {
-    UILabel *txt = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-    txt.text = @"亲，暂无数据哟~";
-    txt.textAlignment = NSTextAlignmentCenter;
-    txt.tag = 1111530;
-    txt.font = [UIFont systemFontOfSize:15];
-    [_outViewController.view addSubview:txt];
-    //    [txt mas_makeConstraints:^(MASConstraintMaker *make) {
-    //        make.centerX.equalTo(root);
-    //        make.height.equalTo(@44);
-    //        make.centerY.equalTo(root);
-    //    }];
+    [self drawEmptyPageForHint:@"亲，暂无数据哟~"];
 }
 
 - (void)drawEmptyPageForHint:(NSString *)hint {
@@ -105,12 +95,13 @@ static dispatch_once_t onceDispatchProccess;
     txt.textAlignment = NSTextAlignmentCenter;
     txt.tag = 1111530;
     txt.font = [UIFont systemFontOfSize:15];
+    txt.translatesAutoresizingMaskIntoConstraints = NO;
     [_outViewController.view addSubview:txt];
-    //    [txt mas_makeConstraints:^(MASConstraintMaker *make) {
-    //        make.centerX.equalTo(root);
-    //        make.height.equalTo(@44);
-    //        make.centerY.equalTo(root);
-    //    }];
+    
+    //水平方向上，logoImageView左侧与父视图左侧对齐，logoImageView右侧与父视图右侧对齐
+    [_outViewController.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[txt]|" options:0 metrics:nil views:@{@"txt": txt}]];
+    //垂直方向上，logoImageView顶部与父视图顶部对齐，logoImageView底部与scrollView顶部对齐，scrollView底部与父视图底部对齐
+    [_outViewController.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[txt]|" options:0 metrics:nil views:@{@"txt": txt}]];
 }
 
 - (void)removeEmptyPage {

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="280"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="280"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ynv-Wv-oGh">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="280"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="测试" translatesAutoresizingMaskIntoConstraints="NO" id="MCi-wo-kBu">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Xji-uh-4sh"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Xji-uh-4sh"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥10.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBZ-zB-7hV">
+                                <rect key="frame" x="8" y="255" width="184" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="GPM-dI-Pin"/>
+                                    <constraint firstAttribute="height" constant="25" id="raX-1V-NpB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="0.87204391889999999" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="GPM-dI-Pin"/>
+                                        <exclude reference="raX-1V-NpB"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uzn-ZT-LjV">
+                                <rect key="frame" x="8" y="238" width="184" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BBZ-zB-7hV" firstAttribute="bottom" secondItem="Ynv-Wv-oGh" secondAttribute="bottomMargin" id="3MA-M5-sUR"/>
+                            <constraint firstItem="Uzn-ZT-LjV" firstAttribute="leading" secondItem="BBZ-zB-7hV" secondAttribute="leading" id="8Tf-UJ-jJG"/>
+                            <constraint firstItem="BBZ-zB-7hV" firstAttribute="top" secondItem="Uzn-ZT-LjV" secondAttribute="bottom" id="Dv2-aA-ejU"/>
+                            <constraint firstItem="Uzn-ZT-LjV" firstAttribute="trailing" secondItem="BBZ-zB-7hV" secondAttribute="trailing" id="HbS-Y6-Pkn"/>
+                            <constraint firstItem="BBZ-zB-7hV" firstAttribute="centerX" secondItem="MCi-wo-kBu" secondAttribute="centerX" id="MwI-Ku-dFe"/>
+                            <constraint firstItem="MCi-wo-kBu" firstAttribute="leading" secondItem="Ynv-Wv-oGh" secondAttribute="leading" id="OO3-GU-rCg"/>
+                            <constraint firstItem="BBZ-zB-7hV" firstAttribute="top" secondItem="MCi-wo-kBu" secondAttribute="bottom" constant="51" id="WzL-qI-sa5"/>
+                            <constraint firstAttribute="trailing" secondItem="MCi-wo-kBu" secondAttribute="trailing" id="Xdd-sX-G3W"/>
+                            <constraint firstItem="Uzn-ZT-LjV" firstAttribute="top" secondItem="MCi-wo-kBu" secondAttribute="bottom" constant="8" symbolic="YES" id="cxI-ZJ-pI5"/>
+                            <constraint firstAttribute="bottom" secondItem="MCi-wo-kBu" secondAttribute="bottom" constant="50" id="gAQ-IU-Wb6"/>
+                            <constraint firstAttribute="bottom" secondItem="MCi-wo-kBu" secondAttribute="bottom" constant="50" id="rh5-9M-GMR"/>
+                            <constraint firstItem="BBZ-zB-7hV" firstAttribute="leading" secondItem="Ynv-Wv-oGh" secondAttribute="leadingMargin" id="s1x-xn-Ljb"/>
+                            <constraint firstItem="MCi-wo-kBu" firstAttribute="top" secondItem="Ynv-Wv-oGh" secondAttribute="top" id="uzP-gE-56j"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="gAQ-IU-Wb6"/>
+                                <exclude reference="WzL-qI-sa5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="Ynv-Wv-oGh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9s9-Dr-iyf"/>
+                <constraint firstItem="Ynv-Wv-oGh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kAY-yx-va1"/>
+                <constraint firstAttribute="trailing" secondItem="Ynv-Wv-oGh" secondAttribute="trailing" id="rjv-lU-Kxe"/>
+                <constraint firstAttribute="bottom" secondItem="Ynv-Wv-oGh" secondAttribute="bottom" id="yva-BA-cUa"/>
+            </constraints>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="测试" width="441" height="443"/>
+    </resources>
+</document>

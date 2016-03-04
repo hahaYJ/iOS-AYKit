@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="底图" translatesAutoresizingMaskIntoConstraints="NO" id="xZd-bc-3ON">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="停车场" translatesAutoresizingMaskIntoConstraints="NO" id="JDU-Lk-GZb">
+                        <rect key="frame" x="45" y="35" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="aLb-xe-TKA"/>
+                            <constraint firstAttribute="width" constant="60" id="bnW-Sf-Ofk"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3N-Gx-IQl">
+                        <rect key="frame" x="8" y="100" width="134" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="JDU-Lk-GZb" firstAttribute="centerX" secondItem="xZd-bc-3ON" secondAttribute="centerX" id="4HL-Wy-JRP"/>
+                <constraint firstItem="xZd-bc-3ON" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="G27-9U-Obh"/>
+                <constraint firstItem="m3N-Gx-IQl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="GZR-pQ-Y0Y"/>
+                <constraint firstAttribute="bottom" secondItem="xZd-bc-3ON" secondAttribute="bottom" id="HCe-2M-JZV"/>
+                <constraint firstItem="JDU-Lk-GZb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="30" id="JDT-2s-JFL"/>
+                <constraint firstItem="JDU-Lk-GZb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="30" id="JV4-zB-QRH"/>
+                <constraint firstItem="xZd-bc-3ON" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="NXE-b1-zYF"/>
+                <constraint firstItem="JDU-Lk-GZb" firstAttribute="centerY" secondItem="xZd-bc-3ON" secondAttribute="centerY" constant="-10" id="XPy-g7-a5i"/>
+                <constraint firstItem="m3N-Gx-IQl" firstAttribute="top" secondItem="JDU-Lk-GZb" secondAttribute="bottom" constant="5" id="eXr-iZ-6SY"/>
+                <constraint firstAttribute="trailing" secondItem="m3N-Gx-IQl" secondAttribute="trailing" constant="8" id="hq0-AB-U92"/>
+                <constraint firstAttribute="trailing" secondItem="xZd-bc-3ON" secondAttribute="trailing" id="vV8-Xe-04s"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="JDT-2s-JFL"/>
+                    <exclude reference="JV4-zB-QRH"/>
+                </mask>
+            </variation>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="停车场" width="50" height="50"/>
+        <image name="底图" width="119" height="119"/>
+    </resources>
+</document>
