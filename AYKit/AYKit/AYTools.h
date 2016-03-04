@@ -11,12 +11,16 @@
 
 @interface AYTools : NSObject
 
-
 @end
-
 
 @interface AYTools (UIColorOperate)
 
 + (UIColor *) stringToColor:(NSString *)str;
+
+@end
+
+@interface AYTools (NSStringOperate)
+
++ (BOOL) isBlankString:(NSString *)string;
 
 @end

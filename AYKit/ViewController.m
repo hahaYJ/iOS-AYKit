@@ -16,9 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%d", self.launchPresentView);
-    self.launchPresentView = YES;
-    NSLog(@"%d", self.launchPresentView);
+    [self drawEmptyPage];
 }
 
 - (void)didReceiveMemoryWarning {

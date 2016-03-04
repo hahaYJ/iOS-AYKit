@@ -83,4 +83,55 @@ static dispatch_once_t onceDispatchProccess;
     }
 }
 
+
+#pragma mark 用于显示空页面
+- (void)drawEmptyPage {
+    UILabel *txt = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    txt.text = @"亲，暂无数据哟~";
+    txt.textAlignment = NSTextAlignmentCenter;
+    txt.tag = 1111530;
+    txt.font = [UIFont systemFontOfSize:15];
+    [_outViewController.view addSubview:txt];
+    //    [txt mas_makeConstraints:^(MASConstraintMaker *make) {
+    //        make.centerX.equalTo(root);
+    //        make.height.equalTo(@44);
+    //        make.centerY.equalTo(root);
+    //    }];
+}
+
+- (void)drawEmptyPageForHint:(NSString *)hint {
+    UILabel *txt = [UILabel new];
+    txt.text = hint;
+    txt.textAlignment = NSTextAlignmentCenter;
+    txt.tag = 1111530;
+    txt.font = [UIFont systemFontOfSize:15];
+    [_outViewController.view addSubview:txt];
+    //    [txt mas_makeConstraints:^(MASConstraintMaker *make) {
+    //        make.centerX.equalTo(root);
+    //        make.height.equalTo(@44);
+    //        make.centerY.equalTo(root);
+    //    }];
+}
+
+- (void)removeEmptyPage {
+    UIView *txt = [_outViewController.view viewWithTag:1111530];
+    if(txt)
+        [txt removeFromSuperview];
+}
+
+- (void)loadingPage {
+    UIActivityIndicatorView *testActivityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    testActivityIndicator.center = CGPointMake(_outViewController.view.center.x, _outViewController.view.center.y - 50);//只能设置中心，不能设置大小
+    [testActivityIndicator startAnimating]; // 开始旋转
+    testActivityIndicator.tag = 3838383838438;
+    [_outViewController.view addSubview:testActivityIndicator];
+}
+
+- (void)didLoadingPage {
+    UIActivityIndicatorView *testActivityIndicator = [_outViewController.view viewWithTag:3838383838438];
+    if(testActivityIndicator) {
+        [testActivityIndicator removeFromSuperview];
+    }
+}
+
 @end

@@ -13,4 +13,11 @@
 
 @property (nonatomic, assign) bool launchPresentView;
 
+#pragma mark 用于显示空页面
+- (void)drawEmptyPage;
+- (void)drawEmptyPageForHint:(NSString *)hint;
+- (void)removeEmptyPage;
+- (void)loadingPage;
+- (void)didLoadingPage;
+
 @end

@@ -37,4 +37,26 @@ static const char *AYLaunchPresentView = "launchPresentView";
     return objc_getAssociatedObject(self, &AYLaunchPresentView);
 }
 
+
+#pragma mark 用于显示空页面
+- (void)drawEmptyPage {
+    [[AYViewControllerProxy obtainProxyWithViewController:self] drawEmptyPage];
+}
+
+- (void)drawEmptyPageForHint:(NSString *)hint {
+    [[AYViewControllerProxy obtainProxyWithViewController:self] drawEmptyPageForHint:hint];
+}
+
+- (void)removeEmptyPage {
+    [[AYViewControllerProxy obtainProxyWithViewController:self] removeEmptyPage];
+}
+
+- (void)loadingPage {
+    [[AYViewControllerProxy obtainProxyWithViewController:self] loadingPage];
+}
+
+- (void)didLoadingPage {
+    [[AYViewControllerProxy obtainProxyWithViewController:self] didLoadingPage];
+}
+
 @end
