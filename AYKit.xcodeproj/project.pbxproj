@@ -29,6 +29,8 @@
 		882304FE1C897E2700F5BF1B /* SimpleTxtForCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882304F81C897E2700F5BF1B /* SimpleTxtForCollectionCell.xib */; };
 		882305041C897E9300F5BF1B /* NYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 882305011C897E9300F5BF1B /* NYAlertView.m */; };
 		882305051C897E9300F5BF1B /* NYAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 882305031C897E9300F5BF1B /* NYAlertViewController.m */; };
+		8823050B1C89C08A00F5BF1B /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 882305081C89C08A00F5BF1B /* UIImage+RoundedCorner.m */; };
+		8823050C1C89C08A00F5BF1B /* UIView+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 8823050A1C89C08A00F5BF1B /* UIView+RoundedCorner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,10 @@
 		882305011C897E9300F5BF1B /* NYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYAlertView.m; sourceTree = "<group>"; };
 		882305021C897E9300F5BF1B /* NYAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYAlertViewController.h; sourceTree = "<group>"; };
 		882305031C897E9300F5BF1B /* NYAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYAlertViewController.m; sourceTree = "<group>"; };
+		882305071C89C08A00F5BF1B /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		882305081C89C08A00F5BF1B /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
+		882305091C89C08A00F5BF1B /* UIView+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundedCorner.h"; sourceTree = "<group>"; };
+		8823050A1C89C08A00F5BF1B /* UIView+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundedCorner.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +163,7 @@
 		882304D71C891C4700F5BF1B /* AYKit */ = {
 			isa = PBXGroup;
 			children = (
+				882305061C89C08100F5BF1B /* View */,
 				882304DC1C8920DD00F5BF1B /* Controller */,
 				882304D81C891FFC00F5BF1B /* Proxy */,
 				882304EA1C89213D00F5BF1B /* AYHeader.h */,
@@ -225,6 +232,17 @@
 			);
 			name = NYAlertViewController;
 			path = ../NYAlertViewController;
+			sourceTree = "<group>";
+		};
+		882305061C89C08100F5BF1B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				882305071C89C08A00F5BF1B /* UIImage+RoundedCorner.h */,
+				882305081C89C08A00F5BF1B /* UIImage+RoundedCorner.m */,
+				882305091C89C08A00F5BF1B /* UIView+RoundedCorner.h */,
+				8823050A1C89C08A00F5BF1B /* UIView+RoundedCorner.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,8 +359,10 @@
 				882304BA1C891C1E00F5BF1B /* ViewController.m in Sources */,
 				882304E71C8920E600F5BF1B /* MainCell.m in Sources */,
 				882304F11C89571900F5BF1B /* AYTools.m in Sources */,
+				8823050B1C89C08A00F5BF1B /* UIImage+RoundedCorner.m in Sources */,
 				882304DB1C89205200F5BF1B /* AYViewControllerProxy.m in Sources */,
 				882304B71C891C1E00F5BF1B /* AppDelegate.m in Sources */,
+				8823050C1C89C08A00F5BF1B /* UIView+RoundedCorner.m in Sources */,
 				882304E91C8920E600F5BF1B /* XXPageController.m in Sources */,
 				882304B41C891C1E00F5BF1B /* main.m in Sources */,
 			);

@@ -13,6 +13,9 @@ static dispatch_once_t onceDispatchProccess;
 
 @interface AYViewControllerProxy ()
 
+@property (nonatomic, copy) NaviBtnBlock leftActionBlock;
+@property (nonatomic, copy) NaviBtnBlock rightActionBlock;
+
 @end
 
 @implementation AYViewControllerProxy
@@ -86,14 +89,14 @@ static dispatch_once_t onceDispatchProccess;
 
 #pragma mark 用于显示空页面
 - (void)drawEmptyPage {
-    [self drawEmptyPageForHint:@"亲，暂无数据哟~"];
+    [self drawEmptyPageForHint:AYDefaultDrawEmptyPageForHint];
 }
 
 - (void)drawEmptyPageForHint:(NSString *)hint {
     UILabel *txt = [UILabel new];
     txt.text = hint;
     txt.textAlignment = NSTextAlignmentCenter;
-    txt.tag = 1111530;
+    txt.tag = 3838383838439;
     txt.font = [UIFont systemFontOfSize:15];
     txt.translatesAutoresizingMaskIntoConstraints = NO;
     [_outViewController.view addSubview:txt];
@@ -105,7 +108,7 @@ static dispatch_once_t onceDispatchProccess;
 }
 
 - (void)removeEmptyPage {
-    UIView *txt = [_outViewController.view viewWithTag:1111530];
+    UIView *txt = [_outViewController.view viewWithTag:3838383838439];
     if(txt)
         [txt removeFromSuperview];
 }
@@ -123,6 +126,36 @@ static dispatch_once_t onceDispatchProccess;
     if(testActivityIndicator) {
         [testActivityIndicator removeFromSuperview];
     }
+}
+
+
+#pragma mark 导航操作模块
+- (void)setNavBtnTitleWithLeft:(NSString *)left andLeftAction:(void(^)(id i))leftBlock right:(NSString *)right andRightAction:(void(^)(id i))rightBlock {
+    if (left) {
+        _leftActionBlock = leftBlock;
+        UIImageView *menuLeftBtn = [[UIImageView alloc] initWithImage:[UIImage imageNamed:left]];
+        menuLeftBtn.frame = CGRectMake(0, 0, 35, 35);
+        [AYTools bindPressed:menuLeftBtn meta:self action:@selector(leftAction:)];
+        _outViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:menuLeftBtn];
+    }
+    if (right) {
+        _rightActionBlock = rightBlock;
+        UIImageView *menuRightBtn = [[UIImageView alloc] initWithImage:[UIImage imageNamed:right]];
+        menuRightBtn.frame = CGRectMake(0, 0, 35, 35);
+        [AYTools bindPressed:menuRightBtn meta:self action:@selector(rightAction:)];
+        _outViewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:menuRightBtn];
+        
+    }
+}
+
+- (void)rightAction:(id)sender {
+    if(_rightActionBlock)
+        _rightActionBlock(sender);
+}
+
+- (void)leftAction:(id)sender {
+    if(_leftActionBlock)
+        _leftActionBlock(sender);
 }
 
 @end

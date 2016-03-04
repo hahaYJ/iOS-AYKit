@@ -13,7 +13,7 @@
 
 
 #define AYThemeColor [AYTools stringToColor:@"#468732"]
-
+#define AYDefaultDrawEmptyPageForHint @"亲，暂无数据哟~"
 
 
 #pragma mark - 导航栏相关配置

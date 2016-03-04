@@ -11,15 +11,16 @@
 #import "AYConstant.h"
 #import "UIViewController+CommonFunction.h"
 
+typedef void(^NaviBtnBlock)(id i);
+
 @interface AYViewControllerProxy : NSObject
 
 @property (nonatomic, weak) UIViewController *outViewController;
 
 + (AYViewControllerProxy *)obtainProxyWithViewController:(UIViewController *) outViewController;
 + (void)destroyProxy;
-
 - (void)viewDidLoad;
-//- (void)viewDidLoadWillInSuper;
+- (void)setNavBtnTitleWithLeft:(NSString *)left andLeftAction:(void(^)(id i))leftBlock right:(NSString *)right andRightAction:(void(^)(id i))rightBlock;
 
 #pragma mark 用于显示空页面
 - (void)drawEmptyPage;

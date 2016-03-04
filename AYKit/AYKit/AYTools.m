@@ -10,6 +10,71 @@
 
 @implementation AYTools
 
++ (void) alert:(NSString *) title message:(NSString *) msg {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil];
+    [alertView show];
+}
+//URLEncode
++(NSString*)urlEncodeString:(NSString*)unencodedString{
+    // CharactersToBeEscaped = @":/?&=;+!@#$()~',*";
+    // CharactersToLeaveUnescaped = @"[].";
+    NSString *encodedString = (NSString *)
+    CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+                                                              (CFStringRef)unencodedString,
+                                                              NULL,
+                                                              (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+                                                              kCFStringEncodingUTF8));
+    
+    return encodedString;
+}
+
+//URLDEcode
++ (NSString *)urlDecodeString:(NSString*)encodedString {
+    //NSString *decodedString = [encodedString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding ];
+    
+    NSString *decodedString  = (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL,
+                                                                                                                     (__bridge CFStringRef)encodedString,
+                                                                                                                     CFSTR(""),
+                                                                                                                     CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
+    return decodedString;
+}
+
+#pragma mark 底依赖会话管理工具
++ (NSString *) getMemberSessionStr {
+    NSString *memberSession = [[NSUserDefaults standardUserDefaults] valueForKey:@"APPDELEGATE_SESSION_STR"];
+    return memberSession;
+}
+
++ (void) reloadMemberSessionStr:(NSString *)session {
+    [[NSUserDefaults standardUserDefaults] setValue: session forKey: @"APPDELEGATE_SESSION_STR"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++ (void) removeMemberSessionStr {
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    [[NSUserDefaults standardUserDefaults] setValue: nil forKey: @"APPDELEGATE_SESSION_STR"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++ (void) reloadSimpleData:(id)simpleData key:(NSString *)key {
+    [[NSUserDefaults standardUserDefaults] setValue:simpleData forKey:key];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++ (id) getSimpleData : (NSString *)key {
+    id simpleData = [[NSUserDefaults standardUserDefaults] valueForKey:key];
+    return simpleData;
+}
+
+
++ (UITapGestureRecognizer *)bindPressed:(id)targetView meta:(id)meta action:(SEL)action {
+    ((UIView *)targetView).userInteractionEnabled = YES;
+    
+    UITapGestureRecognizer *bind = [[UITapGestureRecognizer alloc] initWithTarget:meta action:action];
+    [targetView addGestureRecognizer:bind];
+    return bind;
+}
+
 @end
 
 @implementation AYTools (UIColorOperate)

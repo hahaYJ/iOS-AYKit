@@ -11,6 +11,17 @@
 
 @interface AYTools : NSObject
 
++ (void) alert:(NSString *) title message:(NSString *) msg;
++ (NSString*)urlEncodeString:(NSString*)unencodedString;
++ (NSString *)urlDecodeString:(NSString*)encodedString;
+
++ (void) reloadMemberSessionStr:(NSString *)session;
++ (NSString *) getMemberSessionStr;
++ (void) removeMemberSessionStr;
++ (void) reloadSimpleData:(id)simpleData key:(NSString *)key;
++ (id) getSimpleData:(NSString *)key;
++ (UITapGestureRecognizer *)bindPressed:(id)targetView meta:(id)meta action:(SEL)action;
+
 @end
 
 @interface AYTools (UIColorOperate)

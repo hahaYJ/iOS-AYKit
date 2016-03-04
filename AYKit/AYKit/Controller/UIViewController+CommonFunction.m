@@ -15,13 +15,19 @@
 
 @implementation UIViewController (CommonFunction)
 
-+(void)load {
++ (void)load {
     method_exchangeImplementations(class_getInstanceMethod(self, @selector(viewDidLoad)), class_getInstanceMethod(self, @selector(ay_viewDidLoad)));
+    method_exchangeImplementations(class_getInstanceMethod(self, @selector(viewDidDisappear:)), class_getInstanceMethod(self, @selector(ay_viewDidDisappear:)));
 }
 
--(void)ay_viewDidLoad {
+- (void)ay_viewDidLoad {
     [self ay_viewDidLoad];
     [[AYViewControllerProxy obtainProxyWithViewController:self] viewDidLoad];
+}
+
+- (void)ay_viewDidDisappear:(BOOL)animated {
+    [self ay_viewDidDisappear:animated];
+    [AYViewControllerProxy destroyProxy];
 }
 
 static const char *AYLaunchPresentView = "launchPresentView";
@@ -57,6 +63,13 @@ static const char *AYLaunchPresentView = "launchPresentView";
 
 - (void)didLoadingPage {
     [[AYViewControllerProxy obtainProxyWithViewController:self] didLoadingPage];
+}
+
+
+
+
+- (void)setNavBtnTitleWithLeft:(NSString *)left andLeftAction:(void(^)(id i))leftBlock right:(NSString *)right andRightAction:(void(^)(id i))rightBlock {
+    [[AYViewControllerProxy obtainProxyWithViewController:self] setNavBtnTitleWithLeft:left andLeftAction:leftBlock right:right andRightAction:rightBlock];
 }
 
 @end
